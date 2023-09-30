@@ -255,6 +255,7 @@ nav .logo {
   border: 1px solid hsl(0, 0%, 86%);
 }
 .nav-content {
+  padding: 0 15px;
   max-width: 935px;
   margin: 0 auto;
   display: flex;

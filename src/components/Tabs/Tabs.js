@@ -61,22 +61,20 @@ function Tabs() {
         <div>
             <div className="desktop-only">
                 <div className="tabs">
-                    <Router>
-                        <NavLink to="/" className="tab-item">
-                            {workSvg}
-                            <span>WORKS</span>
-                        </NavLink>
+                    <NavLink to="/" className="tab-item">
+                        {workSvg}
+                        <span>WORKS</span>
+                    </NavLink>
 
-                        <NavLink to="/skills" className="tab-item">
-                            {skillsSvg}
-                            <span>SKILLS</span>
-                        </NavLink>
+                    <NavLink to="/skills" className="tab-item">
+                        {skillsSvg}
+                        <span>SKILLS</span>
+                    </NavLink>
 
-                        <NavLink to="/about" className="tab-item last">
-                            {aboutSvg}
-                            <span>ABOUT ME</span>
-                        </NavLink>
-                    </Router>
+                    <NavLink to="/about" className="tab-item last">
+                        {aboutSvg}
+                        <span>ABOUT ME</span>
+                    </NavLink>
                 </div>
             </div>
             <div className="mobile-tabs mobile-only">
@@ -95,11 +93,9 @@ function Tabs() {
                     </li>
                 </ul>
                 <div className="actions">
-                    <Router>
-                        <NavLink to="/works">{workSvgMobile}</NavLink>
-                        <NavLink to="/skills">{skillsSvgMobile}</NavLink>
-                        <NavLink to="/about">{aboutSvgMobile}</NavLink>
-                    </Router>
+                    <NavLink to="/works">{workSvgMobile}</NavLink>
+                    <NavLink to="/skills">{skillsSvgMobile}</NavLink>
+                    <NavLink to="/about">{aboutSvgMobile}</NavLink>
                 </div>
             </div>
         </div>

@@ -16,8 +16,9 @@ function App() {
             <main>
                 <Header />
                 <Stories />
-                <Tabs />
                 <Router>
+                    <Tabs />
+
                     <Routes>
                         <Route path="/" exact element={<Work />} />
                         <Route path="/works" exact element={<Work />} />

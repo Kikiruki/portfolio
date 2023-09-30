@@ -1,20 +1,30 @@
 import React, {useState} from "react";
 import WorkContent from "../WorkContent/WorkContent";
-import Popup from "../Popup/Popup";
+import Modal from "../Modal/Modal";
+import "./WorkItem.css";
 
 function WorkItem(props) {
     const { data } = props;
     const [open, setOpen] = useState(false);
 
-    const popupContent = (
-        <WorkContent></WorkContent>
-    );
+    function closeModal() {
+        setOpen(false);
+    }
+
+    function openModal() {
+        setOpen(true);
+    }
 
     return (
-        <div className="gallery-item" onClick={() => setOpen(true)}>
+        <div className="gallery-item" onClick={openModal}>
             <img src={data.img} alt="Work 1"/>
             <span className="media-icon"></span>
-            {/*({open} ? <Popup content={popupContent} closePopup={() => setOpen(false)}></Popup>)*/}
+            {
+                open &&
+                <Modal close={closeModal}>
+                    <WorkContent></WorkContent>
+                </Modal>
+            }
         </div>
     );
 }

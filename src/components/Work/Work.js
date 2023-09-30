@@ -1,6 +1,7 @@
 import React from "react";
 import workImage1 from '../../assets/images/gallery-1.jpg';
 import WorkItem from "../WorkItem/WorkItem";
+import "./Work.css";
 
 function Work() {
     const items = [

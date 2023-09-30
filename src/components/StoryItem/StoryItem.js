@@ -1,18 +1,18 @@
 import React, {useState} from 'react';
-import Popup from "../Popup/Popup";
+import Modal from "../Modal/Modal";
 import InstaStories from "react-insta-stories";
 import ProfilePhoto from "../../assets/images/profile-logo.jpg";
 
 function StoryItem(props) {
     const { data } = props;
-    const [show, setShow] = React.useState(false);
+    const [open, setOpen] = useState(false);
 
     function closeModal() {
-        setShow(false);
+        setOpen(false);
     }
 
     function openModal() {
-        setShow(true);
+        setOpen(true);
     }
 
     return (
@@ -22,8 +22,8 @@ function StoryItem(props) {
             </div>
             <div className="title">{data.title}</div>
             {
-                show &&
-                <Popup
+                open &&
+                <Modal
                     close={closeModal}
                 >
                     <InstaStories
@@ -47,7 +47,7 @@ function StoryItem(props) {
                         onStoryStart={()=>{}}
                         onStoryEnd={closeModal}
                     />
-                </Popup>
+                </Modal>
             }
         </li>
     );

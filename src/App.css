@@ -83,7 +83,6 @@ video {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
   font: inherit;
   vertical-align: baseline;
 }
@@ -154,7 +153,7 @@ main {
   /* background: yellow; */
   max-width: 935px;
   margin: 0 auto;
-  padding: 30px 20px 0px 20px;
+  padding: 30px 20px 0 20px;
 }
 @media only screen and (max-width: 735px) {
   main {
@@ -285,7 +284,7 @@ header {
 }
 @media only screen and (max-width: 735px) {
   header {
-    margin-bottom: 0px;
+    margin-bottom: 0;
   }
 }
 .header-grid {
@@ -347,7 +346,7 @@ header {
   }
   .profile-info .title button {
     display: block;
-    margin-left: 0px;
+    margin-left: 0;
   }
 }
 .profile-info .details li {
@@ -383,14 +382,14 @@ header {
     font-size: 14px;
     padding-left: 16px;
     padding-bottom: 21px;
-    margin-bottom: 0px !important;
+    margin-bottom: 0 !important;
   }
 }
 .profile-info .row {
   margin-bottom: 20px;
 }
 .profile-info .row.last {
-  margin-bottom: 0px;
+  margin-bottom: 0;
 }
 
 /* Story */
@@ -404,7 +403,7 @@ header {
 }
 @media only screen and (max-width: 735px) {
   .story-item {
-    padding: 0px 5px;
+    padding: 0 5px;
   }
 }
 .story-item .image img {
@@ -446,14 +445,12 @@ header {
 .stories {
   display: flex;
   padding: 0 24px;
-  /* background: chocolate; */
-  overflow-x: scroll;
   position: relative;
   margin-bottom: 44px;
 }
 @media only screen and (max-width: 735px) {
   .stories {
-    padding: 0px;
+    padding: 0;
     margin-bottom: 21px;
   }
 }
@@ -479,7 +476,7 @@ header {
   margin-right: 60px;
 }
 .tab-item.last {
-  margin-right: 0px;
+  margin-right: 0;
 }
 .tab-item.active span {
   color: hsl(0, 0%, 15%);
@@ -512,7 +509,7 @@ header {
 .mobile-tabs ul {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  padding: 12px 0px;
+  padding: 12px 0;
   border-top: 1px solid rgb(219, 219, 219);
 }
 .mobile-tabs .actions {
@@ -521,29 +518,4 @@ header {
   height: 44px;
   align-items: center;
   border-top: 1px solid rgb(219, 219, 219);
-}
-
-/* Gallery */
-.gallery-item img {
-  width: 100%;
-  display: block;
-}
-.gallery-item {
-  background: tomato;
-  position: relative;
-}
-.gallery-item .media-icon {
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-.gallery {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 28px;
-}
-@media only screen and (max-width: 735px) {
-  .gallery {
-    gap: 3px;
-  }
 }

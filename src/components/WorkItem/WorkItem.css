@@ -1,0 +1,15 @@
+/* Gallery */
+.gallery-item img {
+    width: 100%;
+    display: block;
+}
+.gallery-item {
+    cursor: pointer;
+    background: tomato;
+    position: relative;
+}
+.gallery-item .media-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+}

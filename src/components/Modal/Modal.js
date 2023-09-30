@@ -1,7 +1,7 @@
 import React, {useEffect} from "react";
-import "./Popup.css";
+import "./Modal.css";
 
-function Popup(props) {
+function Modal(props) {
     const CodeEsc = 27;
 
     const { children, close } = props;
@@ -35,4 +35,4 @@ function Popup(props) {
     );
 }
 
-export default Popup;
+export default Modal;

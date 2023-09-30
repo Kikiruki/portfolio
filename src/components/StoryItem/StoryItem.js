@@ -5,46 +5,49 @@ import ProfilePhoto from "../../assets/images/profile-logo.jpg";
 
 function StoryItem(props) {
     const { data } = props;
-    const [open, setOpen] = useState(false);
+    const [show, setShow] = React.useState(false);
 
-    const storyModal = (
-        <InstaStories
-            stories={[{
-                url: data.img,
-                type: 'image',
-                header: {
-                    heading: "k_konuc",
-                    subheading: "Kirul Kandukou",
-                    profileImage: ProfilePhoto
-                },
-            }]}
-            defaultInterval={5000}
-            // width={'100%'}
-            // height={'100vh'}
-            style={{display: 'flex', justifyContent: "center", background:"red",
-                cursor: 'pointer'
-            }}
-            loop={false}
-            keyboardNavigation={true}
-            isPaused={()=>{}}
-            currentIndex={()=>{}}
-            onStoryStart={()=>{}}
-            onStoryEnd={()=>{setOpen(false)}}
-        />
-    )
+    function closeModal() {
+        setShow(false);
+    }
+
+    function openModal() {
+        setShow(true);
+    }
 
     return (
-        <li className="story-item" onClick={() => setOpen(true)}>
+        <li className="story-item" onClick={openModal}>
             <div className="image">
                 <img src={data.img} alt={data.description} />
             </div>
             <div className="title">{data.title}</div>
             {
-                open ?
+                show &&
                 <Popup
-                    content={storyModal}
-                    closePopup={() => setOpen(false)}
-                /> : null
+                    close={closeModal}
+                >
+                    <InstaStories
+                        stories={[{
+                            url: data.img,
+                            type: 'image',
+                            header: {
+                                heading: "k_konuc",
+                                subheading: "Kirul Kandukou",
+                                profileImage: ProfilePhoto
+                            },
+                        }]}
+                        defaultInterval={5000}
+                        style={{display: 'flex', justifyContent: "center", background:"red",
+                            cursor: 'pointer'
+                        }}
+                        loop={false}
+                        keyboardNavigation={true}
+                        isPaused={()=>{}}
+                        currentIndex={()=>{}}
+                        onStoryStart={()=>{}}
+                        onStoryEnd={closeModal}
+                    />
+                </Popup>
             }
         </li>
     );

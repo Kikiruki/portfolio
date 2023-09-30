@@ -1,6 +1,6 @@
 import React from "react";
 import "./Tabs.css";
-import {BrowserRouter as Router, NavLink} from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 
 function Tabs() {
     const workSvg = (

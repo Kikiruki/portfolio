@@ -3,14 +3,28 @@
     height: auto;
     display: block;
 }
+/* Default styles for larger screens */
 .grid {
     display: grid;
     grid-template-columns: 600px 335px;
     background: #fff;
 }
+
 .grid .image-wrap {
     max-width: 600px;
 }
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr; /* 1 column for mobile */
+    }
+
+    .grid .image-wrap {
+        max-width: 100%; /* Full width for images on mobile */
+    }
+}
+
 .meta-wrap {
     padding: 20px;
 }

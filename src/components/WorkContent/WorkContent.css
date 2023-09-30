@@ -10,16 +10,16 @@
 
 .grid {
     display: grid;
-    grid-template-columns: 735px 335px;
+    grid-template-columns: 535px 335px;
     background: #fff;
 }
 
 .grid .image-wrap {
-    max-width: 600px;
+    max-width: 735px;
 }
 
 /* Media query for mobile devices */
-@media (max-width: 768px) {
+@media (max-width: 735px) {
     .grid {
         grid-template-columns: 1fr; /* 1 column for mobile */
     }

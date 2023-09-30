@@ -15,7 +15,7 @@ function Navigation() {
                     </div>
                     <div>
                         <button className="primary">ENG</button>
-                        <button>RUS</button>
+                        <button>РУС</button>
                     </div>
                 </div>
             </div>

@@ -3,10 +3,14 @@
     height: auto;
     display: block;
 }
-/* Default styles for larger screens */
+
+.grid-header {
+    padding: 10px 20px;
+}
+
 .grid {
     display: grid;
-    grid-template-columns: 600px 335px;
+    grid-template-columns: 735px 335px;
     background: #fff;
 }
 
@@ -65,4 +69,3 @@
     overflow: scroll;
     margin: -10px 20px 20px;
 }
- 

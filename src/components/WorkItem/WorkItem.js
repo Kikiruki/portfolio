@@ -22,7 +22,7 @@ function WorkItem(props) {
             {
                 open &&
                 <Modal close={closeModal}>
-                    <WorkContent></WorkContent>
+                    <WorkContent close={closeModal}></WorkContent>
                 </Modal>
             }
         </div>

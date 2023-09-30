@@ -22,9 +22,14 @@
 
 .popup-body {
     margin: auto;
-    border-radius: 15px;
-    border-color: black;
     background: white;
-    box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
     z-index: 1002;
+}
+
+.close-cross {
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    opacity: 0.6;
+    z-index: 1004;
 }

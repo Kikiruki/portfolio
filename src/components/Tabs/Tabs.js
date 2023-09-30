@@ -2,7 +2,9 @@ import React from "react";
 import "./Tabs.css";
 import {NavLink} from 'react-router-dom';
 
-function Tabs() {
+function Tabs(params) {
+    const {stats} = params;
+
     const workSvg = (
         <svg aria-label="Posts" className="_8-yf5" fill="#262626" height="12" viewBox="0 0 48 48"
              width="12">
@@ -79,18 +81,14 @@ function Tabs() {
             </div>
             <div className="mobile-tabs mobile-only">
                 <ul>
-                    <li>
-                        <div>722</div>
-                        posts
-                    </li>
-                    <li>
-                        <div>25.1m</div>
-                        followers
-                    </li>
-                    <li>
-                        <div>6</div>
-                        following
-                    </li>
+                    {stats.map((stat, key) => {
+                        return (
+                            <li key={key}>
+                                <div>{stat.value}</div>
+                                {stat.label}
+                            </li>
+                        );
+                    })}
                 </ul>
                 <div className="actions">
                     <NavLink to="/works">{workSvgMobile}</NavLink>

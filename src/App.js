@@ -10,14 +10,39 @@ import About from "./components/About/About";
 import Skills from "./components/Skills/Skills";
 
 function App() {
+    const statistics = [
+        {
+            "label": "followers",
+            "value": "25.1m"
+        },
+        {
+            "label": "following",
+            "value": "6"
+        },
+        {
+            "label": "projects",
+            "value": "722"
+        },
+        {
+            "label": "matches",
+            "value": "341"
+        },
+        {
+            "label": "salary",
+            "value": "100m"
+        },
+    ];
+
+    const randomStats = shuffle(statistics).slice(0, 3);
+
     return (
         <div>
             <Navigation />
             <main>
-                <Header />
+                <Header stats={randomStats} />
                 <Stories />
                 <Router>
-                    <Tabs />
+                    <Tabs stats={randomStats} />
 
                     <Routes>
                         <Route path="/" exact element={<Work />} />
@@ -29,6 +54,24 @@ function App() {
             </main>
         </div>
     );
+
+    function shuffle(array) {
+        let currentIndex = array.length,  randomIndex;
+
+        // While there remain elements to shuffle.
+        while (currentIndex > 0) {
+
+            // Pick a remaining element.
+            randomIndex = Math.floor(Math.random() * currentIndex);
+            currentIndex--;
+
+            // And swap it with the current element.
+            [array[currentIndex], array[randomIndex]] = [
+                array[randomIndex], array[currentIndex]];
+        }
+
+        return array;
+    }
 }
 
 export default App;

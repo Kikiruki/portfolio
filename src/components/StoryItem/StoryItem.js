@@ -45,7 +45,7 @@ function StoryItem(props) {
                         isPaused={()=>{}}
                         currentIndex={()=>{}}
                         onStoryStart={()=>{}}
-                        onStoryEnd={closeModal}
+                        onAllStoriesEnd={closeModal}
                     />
                 </Modal>
             }

@@ -4,7 +4,7 @@ import Modal from "../Modal/Modal";
 import "./WorkItem.css";
 
 function WorkItem(props) {
-    const { images } = props;
+    const { images, description } = props;
     const [open, setOpen] = useState(false);
 
     function closeModal() {
@@ -27,7 +27,7 @@ function WorkItem(props) {
             {
                 open &&
                 <Modal close={closeModal}>
-                    <WorkContent images={images} close={closeModal}></WorkContent>
+                    <WorkContent images={images} description={description} close={closeModal}></WorkContent>
                 </Modal>
             }
         </div>

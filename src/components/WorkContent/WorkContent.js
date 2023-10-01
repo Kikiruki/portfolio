@@ -2,9 +2,12 @@ import React,  { useState }  from "react";
 import './WorkContent.css';
 import ProfilePhoto from "../../assets/images/profile-logo.jpg";
 import Carousel from "../Carousel/Carousel";
+import {useTranslation} from "react-i18next";
 
 function WorkContent(params) {
-    const {images, close} = params;
+    const { t } = useTranslation();
+
+    const {images, description, close} = params;
 
     const Meta = () => {
         const [meta] = useState([
@@ -38,13 +41,10 @@ function WorkContent(params) {
     };
 
     const Comments = () => {
-        const comments =
-            "After a few years in London it’s pretty nice to wake up to this sweeeeeeet view 👌🏻";
-
         return (
             <div className="meta comments">
                 <p>
-                    <span className="handle">k_konuc</span> <span>{comments}</span>
+                    <span className="handle">k_konuc</span> <span>{t(description)}</span>
                 </p>
             </div>
         );

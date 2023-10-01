@@ -5,5 +5,11 @@
     "cv_label": "Curriculum Vitae",
     "works_menu_label": "WORKS",
     "skills_menu_label": "SKILLS",
-    "about_me_menu_label": "ABOUT ME"
+    "about_me_menu_label": "ABOUT ME",
+    "skrolick_label": "This is skrolick",
+    "baltica_label": "This is baltica",
+    "life_vitba_label": "This is life vitba",
+    "gruzin_label": "This is gruzin",
+    "nostandarts_label": "This is no standarts",
+    "hokku_label": "This is hokku"
 }

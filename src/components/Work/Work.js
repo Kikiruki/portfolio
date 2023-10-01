@@ -10,7 +10,8 @@ import skrolick_3 from '../../assets/images/posts/skrolick_3.jpg';
 function Work() {
     const items = [
         {
-            images: [skrolick_3, skrolick_2, skrolick_1, ],
+            images: [skrolick_2, skrolick_1, skrolick_3 ],
+            description: ""
         },
     ];
 

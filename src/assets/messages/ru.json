@@ -11,5 +11,16 @@
     "life_vitba_label": "ВИТЕБСК",
     "gruzin_label": "ГРУЗИН",
     "nostandarts_label": "НОУ СТАНДАРТС",
-    "hokku_label": "ХОККИ"
+    "hokku_label": "ХОККИ",
+    "football_label": "Футбик",
+    "exhibition_label": "Выставки",
+    "quiz_label": "Квизы",
+    "bike_label": "Велик",
+    "lang_label": "Языки",
+    "books_label": "Книги",
+    "coffee_label": "Кофе",
+    "skate_label": "Скейт",
+    "films_label": "Фильмы",
+    "photo_label": "Фото",
+    "photobomb_label": "Фотобомба?"
 }

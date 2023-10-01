@@ -413,6 +413,7 @@ header {
 .story-item .image img {
   width: 77px;
   height: 77px;
+  object-fit: cover;
   border-radius: 1000px;
   display: block;
 }
@@ -431,6 +432,7 @@ header {
   font-size: 14px;
   font-weight: 600;
   padding-top: 15px;
+  padding-bottom: 5px;
   /* background: pink; */
   text-align: center;
   white-space: nowrap;
@@ -451,6 +453,7 @@ header {
   padding: 0 24px;
   position: relative;
   margin-bottom: 44px;
+  overflow: auto;
 }
 @media only screen and (max-width: 735px) {
   .stories {

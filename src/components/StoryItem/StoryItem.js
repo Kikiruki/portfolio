@@ -2,8 +2,12 @@ import React, {useState} from 'react';
 import Modal from "../Modal/Modal";
 import InstaStories from "react-insta-stories";
 import ProfilePhoto from "../../assets/images/profile-logo.jpg";
+import {useTranslation} from "react-i18next";
 
 function StoryItem(props) {
+    const { t } = useTranslation();
+
+
     const { data } = props;
     const [open, setOpen] = useState(false);
 
@@ -20,7 +24,7 @@ function StoryItem(props) {
             <div className="image">
                 <img src={data.images[0]} alt={data.description} />
             </div>
-            <div className="title">{data.title}</div>
+            <div className="title">{t(data.title)}</div>
             {
                 open &&
                 <Modal

@@ -11,5 +11,16 @@
     "life_vitba_label": "This is life vitba",
     "gruzin_label": "This is gruzin",
     "nostandarts_label": "This is no standarts",
-    "hokku_label": "This is hokku"
+    "hokku_label": "This is hokku",
+    "football_label": "Football",
+    "exhibition_label": "Exhibition",
+    "quiz_label": "Quiz's",
+    "bike_label": "Bike",
+    "lang_label": "Languages",
+    "books_label": "Books",
+    "coffee_label": "Coffee",
+    "skate_label": "Skate",
+    "films_label": "Films",
+    "photo_label": "Photography",
+    "photobomb_label": "BomB?"
 }

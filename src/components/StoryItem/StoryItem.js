@@ -18,7 +18,7 @@ function StoryItem(props) {
     return (
         <li className="story-item" onClick={openModal}>
             <div className="image">
-                <img src={data.img} alt={data.description} />
+                <img src={data.images[0]} alt={data.description} />
             </div>
             <div className="title">{data.title}</div>
             {
@@ -27,15 +27,19 @@ function StoryItem(props) {
                     close={closeModal}
                 >
                     <InstaStories
-                        stories={[{
-                            url: data.img,
-                            type: 'image',
-                            header: {
-                                heading: "k_konuc",
-                                subheading: "Kirul Kandukou",
-                                profileImage: ProfilePhoto
-                            },
-                        }]}
+                        stories={
+                            data.images.map((value, key) => {
+                                return {
+                                    url: value,
+                                    type: 'image',
+                                    header: {
+                                        heading: "k_konuc",
+                                        subheading: "Kirul Kandukou",
+                                        profileImage: ProfilePhoto
+                                    },
+                                }
+                            })
+                        }
                         defaultInterval={5000}
                         style={{display: 'flex', justifyContent: "center", background:"red",
                             cursor: 'pointer'

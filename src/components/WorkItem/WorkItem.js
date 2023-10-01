@@ -15,10 +15,14 @@ function WorkItem(props) {
         setOpen(true);
     }
 
-    console.log(images)
     return (
-        <div className="gallery-item" onClick={openModal}>
-            <img src={images[0]} alt="Work 1"/>
+        <div className="gallery-item" onClick={openModal}
+            style={{
+                backgroundImage: `url(${images[0]})`,
+                backgroundSize: 'cover', // You can adjust this to your needs
+                backgroundRepeat: 'no-repeat',
+                backgroundPosition: 'center', // You can adjust this to your needs
+            }}>
             <span className={images.length > 1 ? "media-icon" : ""}></span>
             {
                 open &&

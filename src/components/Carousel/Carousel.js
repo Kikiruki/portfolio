@@ -19,12 +19,17 @@ const Carousel = ({images}) => {
             <div
                 className="carousel-inner"
                 style={{
+                    height: '100%',
                     transform: `translateX(-${currentIndex * 100}%)`,
                 }}
             >
                 {images.map((image, index) => (
-                    <div key={index} className="slide">
-                        <img src={image} alt={`${index}`}/>
+                    <div key={index} className="slide" style={{
+                        backgroundImage: `url(${image})`,
+                        backgroundSize: 'contain', // You can adjust this to your needs
+                        backgroundRepeat: 'no-repeat',
+                        backgroundPosition: 'center', // You can adjust this to your needs
+                    }}>
                     </div>
                 ))}
             </div>

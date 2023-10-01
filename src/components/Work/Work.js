@@ -1,22 +1,17 @@
 import React from "react";
-import workImage1 from '../../assets/images/gallery-1.jpg';
 import WorkItem from "../WorkItem/WorkItem";
 import "./Work.css";
+
+import skrolick_1 from '../../assets/images/posts/skrolick_1.png';
+import skrolick_2 from '../../assets/images/posts/skrolick_2.png';
+import skrolick_3 from '../../assets/images/posts/skrolick_3.jpg';
+
 
 function Work() {
     const items = [
         {
-            images: [workImage1],
+            images: [skrolick_3, skrolick_2, skrolick_1, ],
         },
-        {
-            images: [workImage1, workImage1],
-        },
-        {
-            images: [workImage1, workImage1],
-        },
-        {
-            images: [workImage1, workImage1],
-        }
     ];
 
     return (

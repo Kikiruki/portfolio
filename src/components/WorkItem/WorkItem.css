@@ -1,13 +1,19 @@
 /* Gallery */
-.gallery-item img {
-    width: 100%;
-    display: block;
-}
 .gallery-item {
     cursor: pointer;
     background: tomato;
     position: relative;
+    width: 100%;
+    padding-top: 100%; /* This creates a square aspect ratio */
 }
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover; /* This will make the image fill the square container */
+}
+
 .gallery-item .media-icon {
     position: absolute;
     top: 0;

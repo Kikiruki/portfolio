@@ -248,6 +248,7 @@ nav .logo {
   width: 215px;
   height: 28px;
   overflow: hidden;
+  white-space: nowrap;
   background: hsl(0, 0%, 98%);
   display: flex;
   justify-content: center;

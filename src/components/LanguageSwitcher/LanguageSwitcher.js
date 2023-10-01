@@ -18,8 +18,6 @@ function LanguageSwitcher() {
         localStorage.setItem('selectedLanguage', language);
     };
 
-    console.log(i18n.language);
-
     return (
         <div>
             <button className={i18n.language === "en" ? "primary" : ""} onClick={() => changeLanguage('en')}>

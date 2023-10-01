@@ -2,6 +2,7 @@ import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 
 import enTranslation from './assets/messages/en.json';
+import ruTranslation from './assets/messages/ru.json';
 
 i18n
     .use(initReactI18next)
@@ -9,6 +10,9 @@ i18n
         resources: {
             en: {
                 translation: enTranslation,
+            },
+            ru: {
+                translation: ruTranslation,
             }
         },
         lng: 'en',

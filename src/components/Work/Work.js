@@ -6,16 +6,16 @@ import "./Work.css";
 function Work() {
     const items = [
         {
-            img: workImage1,
+            images: [workImage1],
         },
         {
-            img: workImage1,
+            images: [workImage1, workImage1],
         },
         {
-            img: workImage1,
+            images: [workImage1, workImage1],
         },
         {
-            img: workImage1,
+            images: [workImage1, workImage1],
         }
     ];
 
@@ -23,7 +23,7 @@ function Work() {
         <div className="gallery">
             {items.map((item, key) => {
                 return (
-                    <WorkItem key={key} data={item}></WorkItem>
+                    <WorkItem key={key} images={item.images}></WorkItem>
                 )
             })}
         </div>

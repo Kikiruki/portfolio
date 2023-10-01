@@ -4,7 +4,7 @@ import Modal from "../Modal/Modal";
 import "./WorkItem.css";
 
 function WorkItem(props) {
-    const { data } = props;
+    const { images } = props;
     const [open, setOpen] = useState(false);
 
     function closeModal() {
@@ -15,14 +15,15 @@ function WorkItem(props) {
         setOpen(true);
     }
 
+    console.log(images)
     return (
         <div className="gallery-item" onClick={openModal}>
-            <img src={data.img} alt="Work 1"/>
-            <span className="media-icon"></span>
+            <img src={images[0]} alt="Work 1"/>
+            <span className={images.length > 1 ? "media-icon" : ""}></span>
             {
                 open &&
                 <Modal close={closeModal}>
-                    <WorkContent close={closeModal}></WorkContent>
+                    <WorkContent images={images} close={closeModal}></WorkContent>
                 </Modal>
             }
         </div>

@@ -1,21 +1,10 @@
-import React,  { useState, useEffect }  from "react";
+import React,  { useState }  from "react";
 import './WorkContent.css';
 import ProfilePhoto from "../../assets/images/profile-logo.jpg";
+import Carousel from "../Carousel/Carousel";
 
 function WorkContent(params) {
-    const {close} = params;
-
-    const PostImage = () => {
-        const img = "https://res.cloudinary.com/doxyfmuxf/image/upload/v1630592740/niall/br1_udmpiv.jpg";
-
-        const [loaded, setLoaded] = useState(false);
-
-        useEffect(() => {
-            setLoaded(true);
-        }, []);
-
-        return <div>{loaded === true ? <img className={'post-image'} src={img}  alt={''}/> : null}</div>;
-    };
+    const {images, close} = params;
 
     const Meta = () => {
         const [meta] = useState([
@@ -48,8 +37,6 @@ function WorkContent(params) {
         );
     };
 
-//-----------------------------------------------------
-
     const Comments = () => {
         const comments =
             "After a few years in London it’s pretty nice to wake up to this sweeeeeeet view 👌🏻";
@@ -77,7 +64,7 @@ function WorkContent(params) {
 
             <div className="grid">
                 <div className="image-wrap">
-                    <PostImage />
+                    <Carousel images={images} />
                 </div>
                 <div className="meta-info">
                     <Meta />

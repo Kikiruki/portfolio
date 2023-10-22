@@ -1,8 +1,11 @@
 import React from "react";
 import "./Tabs.css";
 import {NavLink} from 'react-router-dom';
+import {useTranslation} from "react-i18next";
 
 function Tabs(params) {
+    const { t } = useTranslation();
+
     const {stats} = params;
 
     const workSvg = (
@@ -65,17 +68,17 @@ function Tabs(params) {
                 <div className="tabs">
                     <NavLink to="/" className="tab-item">
                         {workSvg}
-                        <span>WORKS</span>
+                        <span>{t("menu_works_tab").toUpperCase()}</span>
                     </NavLink>
 
                     <NavLink to="/skills" className="tab-item">
                         {skillsSvg}
-                        <span>SKILLS</span>
+                        <span>{t("menu_skills_tab").toUpperCase()}</span>
                     </NavLink>
 
                     <NavLink to="/about" className="tab-item last">
                         {aboutSvg}
-                        <span>ABOUT ME</span>
+                        <span>{t("menu_about_tab").toUpperCase()}</span>
                     </NavLink>
                 </div>
             </div>

@@ -1,0 +1,49 @@
+.skills-soft ul {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.skills-soft ul li {
+    position: relative;
+}
+
+.skills-soft ul li:hover svg .cbar {
+    stroke: #e07a5f;
+    stroke-width: 4px;
+}
+
+.skills-soft ul li:hover span {
+    transform: scale(1.2) translateY(-50%);
+}
+
+.skills-soft ul li svg {
+    width: 95%;
+    fill: transparent;
+    transform: rotate(-90deg);
+}
+
+.skills-soft ul li svg circle {
+    stroke-width: 1px;
+    stroke: #cdcdcd;
+}
+
+.skills-soft ul li svg .cbar {
+    stroke-width: 3px;
+    stroke: #8d9e78;
+    stroke-linecap: round;
+}
+
+.skills-soft ul li span {
+    position: absolute;
+    display: block;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    transition-duration: .3s;
+}
+
+.resume .func .skills-soft ul li span {
+    top: 40%;
+}

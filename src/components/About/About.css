@@ -1,0 +1,120 @@
+#about {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    font-family: Cambria, Cochin, Georgia, 'Times New Roman', Times, serif;
+}
+
+@media only screen and (min-width: 600px) {
+    #about {
+        font-size: 1.35rem;
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    #about {
+        font-size: 1.5rem;
+    }
+}
+
+#about img {
+    max-width: 100%;
+}
+
+#about figure {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+#about pre {
+    color: #fff;
+    background-color: #333;
+    padding: 1vw;
+    overflow-x: auto;
+}
+
+#about figcaption,
+#about .side-note {
+    font-size: 0.8em;
+    line-height: 1.875;
+    font-style: italic;
+}
+
+#about .side-note {
+    border-left: 5px solid #333;
+    padding-left: 1.5rem;
+}
+
+#about .side-note::before {
+    font-style: normal;
+    text-decoration: underline;
+    margin-right: 0.3em;
+}
+
+@media only screen and (max-width: 600px) {
+    #about .side-note {
+        margin-left: 1.5rem;
+    }
+}
+
+#about .page-content {
+    margin-top: 3vw;
+    margin-bottom: 3vw;
+}
+
+#about > * {
+    margin-top: 0;
+    margin-bottom: 1.5rem; /* 1 */
+}
+
+@supports (display: grid) {
+    @media only screen and (min-width: 600px) {
+        #about {
+            max-width: 100%;
+            margin-right: auto;
+            margin-left: auto;
+            padding-top: 2rem;
+
+            display: grid;
+            grid-column-gap: 1.5rem;
+            align-items: start;
+            grid-template-columns:
+        [full-start main-start] 3fr [main-end side-start] 0fr [side-end full-end];
+        }
+
+        /* Span the regular width */
+        #about > * {
+            grid-column: main;
+        }
+
+        /* Span the full width */
+        #about > pre,
+        #about > figure,
+        #about > blockquote,
+        .grow-to-full {
+            grid-column: full;
+        }
+
+        /*
+        Start with regular content, but span further.
+        Note for future visitors: Use :matches() here
+        */
+        #about > h1,
+        #about > h2,
+        #about > h3,
+        #about > h4,
+        #about > h5,
+        #about > h6 {
+            grid-column: main-start / full-end;
+        }
+
+        /* Make sure, the side note can take its column */
+        #about > .has-side-note {
+            grid-column-end: main-end;
+        }
+
+        /* Additional, related content (i.e. a side note or boxout) */
+        #about > .side-note {
+            grid-column: side;
+        }
+    }
+}

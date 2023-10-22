@@ -10,28 +10,10 @@ import About from "./components/About/About";
 import Skills from "./components/Skills/Skills";
 
 function App() {
-    const statistics = [
-        {
-            "label": "followers",
-            "value": "25.1m"
-        },
-        {
-            "label": "following",
-            "value": "6"
-        },
-        {
-            "label": "projects",
-            "value": "722"
-        },
-        {
-            "label": "matches",
-            "value": "341"
-        },
-        {
-            "label": "salary",
-            "value": "100m"
-        },
-    ];
+    const statistics = [];
+    for (let i = 1; i < 19; i++) {
+        statistics.push('stat_' + i);
+    }
 
     const randomStats = shuffle(statistics).slice(0, 3);
 
@@ -56,14 +38,11 @@ function App() {
     function shuffle(array) {
         let currentIndex = array.length, randomIndex;
 
-        // While there remain elements to shuffle.
         while (currentIndex > 0) {
 
-            // Pick a remaining element.
             randomIndex = Math.floor(Math.random() * currentIndex);
             currentIndex--;
 
-            // And swap it with the current element.
             [array[currentIndex], array[randomIndex]] = [
                 array[randomIndex], array[currentIndex]];
         }

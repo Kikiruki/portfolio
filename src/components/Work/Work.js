@@ -6,7 +6,7 @@ import skrolick_1 from '../../assets/images/posts/skrolick_1.png';
 import skrolick_2 from '../../assets/images/posts/skrolick_2.png';
 import skrolick_3 from '../../assets/images/posts/skrolick_3.jpg';
 
-import baltica_1 from '../../assets/images/posts/baltica_1.png';
+import baltica_1 from '../../assets/images/posts/baltica_1.jpg';
 import baltica_2 from '../../assets/images/posts/baltica_2.jpg';
 import baltica_3 from '../../assets/images/posts/baltica_3.png';
 

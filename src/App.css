@@ -185,7 +185,7 @@ main {
   height: 32px;
 }
 
-button {
+button, .button {
   all: unset;
   font-weight: 600;
   font-size: 14px;
@@ -195,7 +195,7 @@ button {
   border-radius: 4px;
   cursor: pointer;
 }
-button.primary {
+.primary {
   background: #0095f6;
   color: white;
   -webkit-text-fill-color: white;
@@ -334,7 +334,7 @@ header {
 .profile-info .title span {
   margin-left: 8px;
 }
-.profile-info .title button {
+.profile-info .title .button {
   margin-left: 20px;
 }
 @media only screen and (max-width: 735px) {
@@ -348,7 +348,7 @@ header {
   .profile-info .title span {
     display: inline-block;
   }
-  .profile-info .title button {
+  .profile-info .title .button {
     display: block;
     margin-left: 0;
   }

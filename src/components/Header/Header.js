@@ -16,14 +16,17 @@ function Header(params) {
                     <div className="title row">
                         <h2>{t('nickname')}</h2>
                         <span className="verified-icon"></span>
-                        <button className="primary">{t('cv_label')}</button>
+                        <a style={{textAlign: "center"}} href="https://docs.google.com/document/d/1pNSbwVquWMmSGHtRwPMyQTMUrdgdGuCj/edit?usp=sharing&ouid=118236266993243888484&rtpof=true&sd=true" target="_blank" rel="noreferrer"  className="button primary">{t('cv_label')}</a>
                     </div>
                     <div className="desktop-only">
                         <div className="details row">
                             <ul>
                                 {stats.map((stat, key) => {
+                                    stat = t(stat);
+                                    const value = stat.split(' ')[0];
+                                    const label = stat.split(' ').slice(1).join(' ');
                                     return (
-                                        <li key={key}><span>{stat.value}</span> {stat.label}</li>
+                                        <li key={key}><span>{value}</span> {label}</li>
                                     );
                                 })}
                             </ul>
@@ -32,6 +35,8 @@ function Header(params) {
                             <h1>{t('name')}</h1>
                             <span>
                                 {t('bio')}
+                                <br/>
+                                {t('find_me_label')} <a href="https://linktr.ee/k_konuc" target="_blank" rel="noreferrer" >{t('here_label')}</a>
                             </span>
                         </div>
                     </div>
@@ -39,9 +44,11 @@ function Header(params) {
             </div>
             <div className="profile-info mobile-only">
                 <div className="description row">
-                    <h1>Kiryl Kandukou</h1>
+                    <h1>{t('name')}</h1>
                     <span>
-                        Hello! I'm Creative Copywriter.
+                        {t('bio')}
+                        <br/>
+                        {t('find_me_label')} <a href="https://linktr.ee/k_konuc" target="_blank" rel="noreferrer" >{t('here_label')}</a>
                     </span>
                 </div>
             </div>

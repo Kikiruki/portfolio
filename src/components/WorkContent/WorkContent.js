@@ -12,7 +12,7 @@ function WorkContent(params) {
     const Meta = () => {
         const [meta] = useState([
             {
-                name: "k_konuc",
+                name: t('nickname'),
                 city: "Minsk",
                 country: "Belarus",
                 icon: ProfilePhoto
@@ -41,11 +41,11 @@ function WorkContent(params) {
     };
 
     const Comments = () => {
+        const { t } = useTranslation();
+
         return (
             <div className="meta comments">
-                <p>
-                    <span className="handle">k_konuc</span> <span>{t(description)}</span>
-                </p>
+                <div style={{whiteSpace: "pre-line"}}>{t(description)}</div>
             </div>
         );
     };

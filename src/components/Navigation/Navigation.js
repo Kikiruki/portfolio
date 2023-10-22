@@ -5,7 +5,14 @@ import {useTranslation} from "react-i18next";
 
 function Navigation() {
     const { t } = useTranslation();
-    const [phrases] = useState(['name', 'nickname', 'cv_label']); // Use translation keys
+    const search_labels = [];
+    for (let i = 1; i <= 8; i++) {
+        search_labels.push('search_bar_' + i);
+    }
+    search_labels.sort((a, b) => {
+        return 0.5 - Math.random();
+    });
+    const [phrases] = useState(search_labels); // Use translation keys
     const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
     const [currentText, setCurrentText] = useState('');
     const [typing, setTyping] = useState(true);

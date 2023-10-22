@@ -85,10 +85,14 @@ function Tabs(params) {
             <div className="mobile-tabs mobile-only">
                 <ul>
                     {stats.map((stat, key) => {
+                        stat = t(stat);
+                        const value = stat.split(' ')[0];
+                        const label = stat.split(' ').slice(1).join(' ');
+
                         return (
                             <li key={key}>
-                                <div>{stat.value}</div>
-                                {stat.label}
+                                <div>{value}</div>
+                                {label}
                             </li>
                         );
                     })}

@@ -14,9 +14,7 @@ function Skills() {
             {
                 name: "skill_naming_and_sloganwriting",
                 value: 75
-            }
-        ],
-        [
+            },
             {
                 name: "skill_digital_ads",
                 value: 70
@@ -32,16 +30,6 @@ function Skills() {
             {
                 name: "skill_teamwork",
                 value: 80
-            }
-        ],
-        [
-            {
-                name: "skill_adobe_premier_pro",
-                value: 50
-            },
-            {
-                name: "skill_adobe_photoshop",
-                value: 21
             },
             {
                 name: "skill_english",
@@ -50,7 +38,15 @@ function Skills() {
             {
                 name: "skill_spanish",
                 value: 26
-            }
+            },
+            {
+                name: "skill_adobe_premier_pro",
+                value: 50
+            },
+            {
+                name: "skill_adobe_photoshop",
+                value: 21
+            },
         ]
     ];
 
@@ -66,7 +62,7 @@ function Skills() {
                                 const cbar = ((100 - skill.value) / 100) * c;
 
                                 return (
-                                    <li key={key} style={{display: "flex", justifyContent: "center"}} >
+                                    <li key={key} >
                                         <svg viewBox="0 0 100 100">
                                             <circle cx="50" cy="50" r={r}></circle>
                                             <circle className="cbar" cx="50" cy="50" r={r}

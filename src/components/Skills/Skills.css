@@ -1,12 +1,16 @@
 .skills-soft ul {
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-content: center;
     text-align: center;
     padding-top: 2rem;
 }
 
 .skills-soft ul li {
+    display: flex;
+    justify-content: center;
     position: relative;
+    width: 200px;
 }
 
 .skills-soft ul li:hover svg .cbar {

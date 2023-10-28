@@ -7,6 +7,8 @@ function Modal(props) {
     const { children, close } = props;
 
     const closeModal = (e) => {
+        document.documentElement.style.overflow = `auto`;
+        document.body.style.overflow = `auto`;
         e.stopPropagation();
         close();
     };

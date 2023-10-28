@@ -12,10 +12,14 @@ function StoryItem(props) {
     const [open, setOpen] = useState(false);
 
     function closeModal() {
+        document.documentElement.style.overflow = `auto`;
+        document.body.style.overflow = `auto`;
         setOpen(false);
     }
 
     function openModal() {
+        document.documentElement.style.overflow = `hidden`;
+        document.body.style.overflow = `hidden`;
         setOpen(true);
     }
 
@@ -32,13 +36,13 @@ function StoryItem(props) {
                 >
                     <InstaStories
                         stories={
-                            data.images.map((value, key) => {
+                            data.images.map((value) => {
                                 return {
                                     url: value,
                                     type: 'image',
                                     header: {
-                                        heading: "k_konuc",
-                                        subheading: "Kirul Kandukou",
+                                        heading: t('nickname'),
+                                        subheading: t('name'),
                                         profileImage: ProfilePhoto
                                     },
                                 }

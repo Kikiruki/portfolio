@@ -12,6 +12,8 @@ function WorkItem(props) {
     }
 
     function openModal() {
+        document.documentElement.style.overflow = `hidden`;
+        document.body.style.overflow = `hidden`;
         setOpen(true);
     }
 

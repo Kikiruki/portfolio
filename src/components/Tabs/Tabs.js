@@ -66,7 +66,7 @@ function Tabs(params) {
         <div>
             <div className="desktop-only">
                 <div className="tabs">
-                    <NavLink to="/portfolio" className="tab-item">
+                    <NavLink to="/works" className="tab-item">
                         {workSvg}
                         <span>{t("menu_works_tab").toUpperCase()}</span>
                     </NavLink>

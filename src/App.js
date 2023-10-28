@@ -28,9 +28,9 @@ function App() {
                 <Routes>
                     <Route path="/" exact element={<Work/>}/>
                     <Route path="/portfolio" element={<Work/>}/>
-                    <Route path="/portfolio/works" element={<Work/>}/>
-                    <Route path="/portfolio/skills" element={<Skills/>}/>
-                    <Route path="/portfolio/about" element={<About/>}/>
+                    <Route path="/works" element={<Work/>}/>
+                    <Route path="/skills" element={<Skills/>}/>
+                    <Route path="/about" element={<About/>}/>
                 </Routes>
             </main>
         </div>

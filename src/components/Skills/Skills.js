@@ -12,26 +12,22 @@ function Skills() {
                 value: 68
             },
             {
-                name: "skill_script_writing",
-                value: 60
-            },
-            {
-                name: "skill_digital_ads",
-                value: 70
-            },
-            {
                 name: "skill_naming_and_sloganwriting",
                 value: 75
             }
         ],
         [
             {
-                name: "skill_english",
-                value: 64
+                name: "skill_digital_ads",
+                value: 70
             },
             {
-                name: "skill_spanish",
-                value: 26
+                name: "skill_script_writing",
+                value: 60
+            },
+            {
+                name: "skill_working_with_ai",
+                value: 80
             },
             {
                 name: "skill_teamwork",
@@ -40,16 +36,20 @@ function Skills() {
         ],
         [
             {
-                name: "skill_working_with_ai",
-                value: 80
-            },
-            {
                 name: "skill_adobe_premier_pro",
                 value: 50
             },
             {
                 name: "skill_adobe_photoshop",
                 value: 21
+            },
+            {
+                name: "skill_english",
+                value: 64
+            },
+            {
+                name: "skill_spanish",
+                value: 26
             }
         ]
     ];

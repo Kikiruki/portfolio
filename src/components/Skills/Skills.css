@@ -1,6 +1,6 @@
 .skills-soft ul {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     text-align: center;
     padding-top: 2rem;
 }

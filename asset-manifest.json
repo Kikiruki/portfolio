@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.0f4df031.css",
-    "main.js": "/portfolio/static/js/main.6f8eb5c6.js",
+    "main.js": "/portfolio/static/js/main.905cac78.js",
     "static/media/quiz_4.PNG": "/portfolio/static/media/quiz_4.cff21971e2268e6bf8d7.PNG",
     "static/media/baltica_1.jpg": "/portfolio/static/media/baltica_1.5066de7d86fade62d642.jpg",
     "static/media/skrolick_2.png": "/portfolio/static/media/skrolick_2.e74994273cbafec4dcc9.png",
@@ -50,10 +50,10 @@
     "static/media/logo.svg": "/portfolio/static/media/logo.b84ced9267178abe0e92fe7793440b49.svg",
     "index.html": "/portfolio/index.html",
     "main.0f4df031.css.map": "/portfolio/static/css/main.0f4df031.css.map",
-    "main.6f8eb5c6.js.map": "/portfolio/static/js/main.6f8eb5c6.js.map"
+    "main.905cac78.js.map": "/portfolio/static/js/main.905cac78.js.map"
   },
   "entrypoints": [
     "static/css/main.0f4df031.css",
-    "static/js/main.6f8eb5c6.js"
+    "static/js/main.905cac78.js"
   ]
 }

@@ -66,7 +66,7 @@ function Tabs(params) {
         <div>
             <div className="desktop-only">
                 <div className="tabs">
-                    <NavLink to="/works" className="tab-item">
+                    <NavLink to="/" className="tab-item">
                         {workSvg}
                         <span>{t("menu_works_tab").toUpperCase()}</span>
                     </NavLink>
@@ -98,7 +98,7 @@ function Tabs(params) {
                     })}
                 </ul>
                 <div className="actions">
-                    <NavLink to="/works">{workSvgMobile}</NavLink>
+                    <NavLink to="/">{workSvgMobile}</NavLink>
                     <NavLink to="/skills">{skillsSvgMobile}</NavLink>
                     <NavLink to="/about">{aboutSvgMobile}</NavLink>
                 </div>
